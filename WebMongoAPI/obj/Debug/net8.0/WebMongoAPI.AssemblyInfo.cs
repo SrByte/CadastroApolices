@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebMongoAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fe817c8742652b19fea012e3b56332241a2d6ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebMongoAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebMongoAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

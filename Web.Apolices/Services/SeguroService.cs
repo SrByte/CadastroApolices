@@ -50,11 +50,11 @@ public class SeguroService : ISeguroService
 
 
 
-    public async Task<SeguroModel> FindSeguroById(long numeroApolice)
+    public async Task<SeguroModel> FindSeguroById(string id)
     {
         try
         {
-            var response = await _client.GetAsync($"{BasePath}/{numeroApolice}");
+            var response = await _client.GetAsync($"{BasePath}/{id}");
 
             if (response.IsSuccessStatusCode)
             {
@@ -89,19 +89,17 @@ public class SeguroService : ISeguroService
         throw new Exception("Deu algum ruim na chamada da API.");
     }
 
-    public async Task<bool> DeleteSeguroById(long id)
+    public async Task<bool> DeleteSeguroById(string id)
     {
-        // Substitua o código abaixo pelo seu cenário real de exclusão
         var deleteResponse = await _client.DeleteAsync($"{BasePath}/{id}");
 
-        if (!deleteResponse.IsSuccessStatusCode)
+        if (deleteResponse.IsSuccessStatusCode)
             return true;
         return false;
     }
 
     public async Task<SeguroModel> UpdateSeguro(SeguroModel model)
     {
-        // Substitua o código abaixo pelo seu cenário real de atualização
         var updateResponse = await _client.PutAsJsonAsync(BasePath, model);
 
         if (updateResponse.IsSuccessStatusCode)
@@ -112,7 +110,6 @@ public class SeguroService : ISeguroService
         throw new Exception("Erro na atualização do seguro.");
     }
 
-    // Método fictício de exclusão (delete)
   
 }
 

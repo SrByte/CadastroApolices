@@ -51,7 +51,7 @@ namespace Apolices.Web.Controllers
 			}
 			return View(model);
 		}
-		public async Task<IActionResult> Update(int id)
+		public async Task<IActionResult> Update(string id)
 		{
 
 			var model = await _seguroService.FindSeguroById(id);
@@ -92,39 +92,19 @@ namespace Apolices.Web.Controllers
 		}
 
 		//[Authorize]
-		public async Task<IActionResult> Delete(int id)
+		public async Task<IActionResult> Delete(string id)
 		{
-			 var model = await _seguroService.FindSeguroById(id);
-            //if (model == null) return NotFound();
-
-            //var lista = await _categoryService.FindAllCategories();
-
-            //List<SelectListItem> categoryList = (from p in lista.AsEnumerable()
-            //                                     select new SelectListItem
-            //                                     {
-            //                                         Text = p.Name,
-            //                                         Value = p.Id.ToString()
-            //                                     }).ToList();
-
-            //categoryList.Find(c => c.Value == model.CategoryId.ToString()).Selected = true;
-
-            //ViewBag.CategoryId = categoryList;
-            //ViewBag.Url = model.URL;
-
-            //ViewBag.Ingredients = await _ingredientService.FindAllIngredients();
-
-
-
-            return View(model);
+            var seguros = await _seguroService.FindSeguroById(id);
+            return View(seguros);
         }
 
 		[HttpPost]
 		//[Authorize(Roles = Role.Admin)]
 		public async Task<IActionResult> Delete(SeguroModel model)
 		{
-			//var response = await _seguroService.DeleteSeguroById(model.Id);
-			//if (response) return RedirectToAction(
-			//		nameof(Index));
+			var response = await _seguroService.DeleteSeguroById(model.Id.ToString());
+			if (response) return RedirectToAction(
+					nameof(Index));
 			return View(model);
 		}
 	}

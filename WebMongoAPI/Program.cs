@@ -106,9 +106,9 @@ namespace WebMongoAPI
                 return context.Seguros.ToList();
             });
 
-            app.MapGet("/api/v1/apolice/{numeroApolice}", (string numeroApolice, MongoContext context) =>
+            app.MapGet("/api/v1/apolice/{id}", (string id, MongoContext context) =>
             {
-                var apolice = context.Seguros.Where(x => x.NumeroApolice == numeroApolice).FirstOrDefault();
+                var apolice = context.Seguros.Where(x => x.Id == id).FirstOrDefault();
 
                 if (apolice != null)
                 {
@@ -122,10 +122,10 @@ namespace WebMongoAPI
                 }
             });
 
-            app.MapDelete("/api/v1/apolice/{numeroApolice}", (string numeroApolice, MongoContext context) =>
+            app.MapDelete("/api/v1/apolice/{id}", (string id, MongoContext context) =>
             {
 
-                var apolice = context.Seguros.Where(x => x.NumeroApolice == numeroApolice).FirstOrDefault();
+                var apolice = context.Seguros.Where(x => x.Id == id).FirstOrDefault();
 
                 if (apolice != null)
                 {

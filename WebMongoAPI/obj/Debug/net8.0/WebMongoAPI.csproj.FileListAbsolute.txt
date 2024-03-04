@@ -96,3 +96,4 @@ C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\WebMongoAPI\obj\De
 C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\WebMongoAPI\obj\Debug\net8.0\WebMongoAPI.pdb
 C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\WebMongoAPI\obj\Debug\net8.0\WebMongoAPI.genruntimeconfig.cache
 C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\WebMongoAPI\obj\Debug\net8.0\ref\WebMongoAPI.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\CadastroApolices\WebMongoAPI\obj\Debug\net8.0\WebMongoAPI.sourcelink.json

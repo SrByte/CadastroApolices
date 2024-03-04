@@ -55,3 +55,4 @@ C:\Users\EliasOliveira\Documents\Pos\BD Persisting\CadastroApolices\Web.Apolices
 C:\Users\EliasOliveira\Documents\Pos\BD Persisting\CadastroApolices\Web.Apolices\obj\Debug\net7.0\Web.Apolices.pdb
 C:\Users\EliasOliveira\Documents\Pos\BD Persisting\CadastroApolices\Web.Apolices\obj\Debug\net7.0\Web.Apolices.genruntimeconfig.cache
 C:\Users\EliasOliveira\Documents\Pos\BD Persisting\CadastroApolices\Web.Apolices\obj\Debug\net7.0\ref\Web.Apolices.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\CadastroApolices\Web.Apolices\obj\Debug\net7.0\Web.Apolices.sourcelink.json
