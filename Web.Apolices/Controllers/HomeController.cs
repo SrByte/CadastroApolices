@@ -34,14 +34,10 @@ namespace Apolices.Web.Controllers
 			return View();
 		}
 
-		//[Authorize]
 		[HttpPost]
-		//public async Task<IActionResult> Create(RecipeModel model, string CategoryId)
 		public async Task<IActionResult> Create(SeguroModel model)
 
 		{
-			//model.CategoryId = int.Parse(CategoryId);
-
 			if (ModelState.IsValid)
 			{
 				model.Id = ObjectId.GenerateNewId().ToString();
@@ -55,9 +51,9 @@ namespace Apolices.Web.Controllers
 		{
 
 			var model = await _seguroService.FindSeguroById(id);
-			//if (model == null) return NotFound();
-			
-			//var lista = await _categoryService.FindAllCategories();
+			if (model == null) return NotFound();
+
+			var lista = await _seguroService.FindAllSeguros();
 
 			//List<SelectListItem> categoryList = (from p in lista.AsEnumerable()
 			//									 select new SelectListItem
@@ -77,7 +73,6 @@ namespace Apolices.Web.Controllers
 
 		}
 
-		//[Authorize]
 		[HttpPost]
 		public async Task<IActionResult> Update(SeguroModel model)
 		{			
