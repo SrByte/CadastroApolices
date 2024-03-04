@@ -1,0 +1,16 @@
+# Arquivos de compilação C#
+bin/
+obj/
+
+# Arquivos do Visual Studio
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Pacotes NuGet
+*.nuget/
+
+# Arquivos de log
+*.log
