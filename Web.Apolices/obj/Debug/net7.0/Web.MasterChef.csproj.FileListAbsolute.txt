@@ -1,0 +1,140 @@
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\appsettings.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.staticwebassets.runtime.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.exe
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.deps.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.runtimeconfig.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.pdb
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.AssemblyReference.cache
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.AssemblyInfoInputs.cache
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.AssemblyInfo.cs
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.CoreCompileInputs.cache
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.RazorAssemblyInfo.cache
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.RazorAssemblyInfo.cs
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.Web.MasterChef.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.build.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\bundle\Web.MasterChef.styles.css
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\projectbundle\Web.MasterChef.bundle.scp.css
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.CopyComplete
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\refint\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.pdb
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.genruntimeconfig.cache
+C:\Users\EliasOliveira\Documents\Pos\TrabalhoWeb\MasterChef\Web.MasterChef\obj\Debug\net7.0\ref\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\appsettings.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.staticwebassets.runtime.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.exe
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.deps.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.runtimeconfig.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.pdb
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.AssemblyReference.cache
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.AssemblyInfoInputs.cache
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.AssemblyInfo.cs
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.CoreCompileInputs.cache
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.RazorAssemblyInfo.cache
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.RazorAssemblyInfo.cs
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.sourcelink.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.Web.MasterChef.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.build.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\bundle\Web.MasterChef.styles.css
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\projectbundle\Web.MasterChef.bundle.scp.css
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.CopyComplete
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\refint\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.pdb
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.genruntimeconfig.cache
+C:\Users\EliasOliveira\Documents\Pos\MasterChef\Web.MasterChef\obj\Debug\net7.0\ref\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\appsettings.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.staticwebassets.runtime.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.exe
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.deps.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.runtimeconfig.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Web.MasterChef.pdb
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\AWSSDK.Core.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\AWSSDK.SecurityToken.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\DnsClient.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\MongoDB.Bson.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\MongoDB.Driver.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\SharpCompress.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\Snappier.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\ZstdSharp.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.AssemblyReference.cache
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.AssemblyInfoInputs.cache
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.AssemblyInfo.cs
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.CoreCompileInputs.cache
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.RazorAssemblyInfo.cache
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.RazorAssemblyInfo.cs
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.Web.MasterChef.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.build.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Web.MasterChef.props
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\bundle\Web.MasterChef.styles.css
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\scopedcss\projectbundle\Web.MasterChef.bundle.scp.css
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.csproj.CopyComplete
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\refint\Web.MasterChef.dll
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.pdb
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\Web.MasterChef.genruntimeconfig.cache
+C:\Users\EliasOliveira\Documents\Pos\BD Persisting\MasterChef\Web.MasterChef\obj\Debug\net7.0\ref\Web.MasterChef.dll
