@@ -14,14 +14,14 @@ namespace Apolices.Web.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ISeguroService _seguroService;		
+		private readonly ISeguroService _seguroService;
 		private readonly IMemoryCache _cache;
 
 
 
-		public HomeController(  ISeguroService seguroService)
+		public HomeController(ISeguroService seguroService)
 		{
-			_seguroService = seguroService;	
+			_seguroService = seguroService;
 		}
 		public async Task<IActionResult> Index()
 		{
@@ -30,9 +30,17 @@ namespace Apolices.Web.Controllers
 			return View(seguros);
 		}
 		public IActionResult Create()
-		{		
+		{
+			var categoryOptions = new List<string>	{
+		"Anual",
+		"Mensal"
+			};
+
+			ViewBag.CategoryId = new SelectList(categoryOptions, "Name");
+
 			return View();
 		}
+
 
 		[HttpPost]
 		public async Task<IActionResult> Create(SeguroModel model)
@@ -75,7 +83,7 @@ namespace Apolices.Web.Controllers
 
 		[HttpPost]
 		public async Task<IActionResult> Update(SeguroModel model)
-		{			
+		{
 
 			if (ModelState.IsValid)
 			{
@@ -89,9 +97,9 @@ namespace Apolices.Web.Controllers
 		//[Authorize]
 		public async Task<IActionResult> Delete(string id)
 		{
-            var seguros = await _seguroService.FindSeguroById(id);
-            return View(seguros);
-        }
+			var seguros = await _seguroService.FindSeguroById(id);
+			return View(seguros);
+		}
 
 		[HttpPost]
 		//[Authorize(Roles = Role.Admin)]

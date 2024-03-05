@@ -15,9 +15,9 @@ namespace Apolices.Web.Models
         //public bool BeneficiariosIndicados { get; set; }
         //public List<BeneficiarioModel> Beneficiarios { get; set; }
         //public string AnexarApolice { get; set; }
-        //public string DataAquisicaoApolice { get; set; }
-        //public decimal ValorPremio { get; set; }
-        //public string FrequenciaPagamento { get; set; }
-        //public string Satisfacao { get; set; }
+        public string DataAquisicaoApolice { get; set; }
+        public string ValorPremio { get; set; }
+        public string FrequenciaPagamento { get; set; }
+        public string Satisfacao { get; set; }
     }
 }
