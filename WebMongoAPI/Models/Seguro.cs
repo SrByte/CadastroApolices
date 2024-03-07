@@ -13,7 +13,6 @@ public class Seguro
 	public string Seguradora { get; set; }
     public string NumeroApolice { get; set; }
     //public List<Cobertura> Coberturas { get; set; }
-    //public bool BeneficiariosIndicados { get; set; }
     //public List<Beneficiario> Beneficiarios { get; set; }
     //public string AnexarApolice { get; set; }
     public string DataAquisicaoApolice { get; set; }

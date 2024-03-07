@@ -12,7 +12,6 @@ namespace Apolices.Web.Models
 		public string Seguradora { get; set; }
         public string NumeroApolice { get; set; }
         //public List<CoberturaModel> Coberturas { get; set; }
-        //public bool BeneficiariosIndicados { get; set; }
         //public List<BeneficiarioModel> Beneficiarios { get; set; }
         //public string AnexarApolice { get; set; }
         public string DataAquisicaoApolice { get; set; }

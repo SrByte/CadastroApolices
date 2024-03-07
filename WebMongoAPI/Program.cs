@@ -84,19 +84,8 @@ namespace WebMongoAPI
                        });
 
             app.MapPut("/api/v1/apolice", (MongoContext context, Seguro seguro) =>
-            {
-                var apolice = context.Seguros.Where(x => x.NumeroApolice == seguro.NumeroApolice).FirstOrDefault();
-
-
-
-                apolice.Seguradora = seguro.Seguradora;
-                apolice.NumeroApolice = seguro.NumeroApolice;
-                //apolice.FrequenciaPagamento = seguro.FrequenciaPagamento;
-                //apolice.Satisfacao = seguro.Satisfacao;
-                //apolice.BeneficiariosIndicados = seguro.BeneficiariosIndicados;
-                //olice.FrequenciaPagamento = seguro.FrequenciaPagamento;
-
-                context.Seguros.Update(apolice);
+            {              
+                context.Seguros.Update(seguro);
                 context.SaveChangesAsync();
                 return seguro;
             });
