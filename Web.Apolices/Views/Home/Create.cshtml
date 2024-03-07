@@ -20,12 +20,72 @@
                 <input asp-for="Seguradora" class="form-control" />
                 <span asp-validation-for="Seguradora" class="text-danger" />
             </div>
-            <div class="col-2">
-                <label asp-for="NumeroApolice" class="control-label pt-2" style="font-size:20px;">No. Apólice</label>
-            </div>
-            <div class="col-10 pb-3">
-                <input asp-for="NumeroApolice" class="form-control" />
-                <span asp-validation-for="NumeroApolice" class="text-danger" />
+            <div class="row">
+                <div class="col-2">
+                    <label asp-for="NumeroApolice" class="control-label pt-2" style="font-size:20px;">No. Apólice</label>
+                </div>
+                <div class="col-md-6 pb-3">
+                    <input asp-for="NumeroApolice" class="form-control" />
+                    <span asp-validation-for="NumeroApolice" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <input type="button" value="Adicionar Cobertura" class="btn btn-success form-control" />
+                </div>
+            </div>           
+            <div class="container mt-1 mb-4">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label">Cobertura</label>
+                    </div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label">Capital Segurado</label>
+                    </div>
+                    <div class="col">                       
+                    </div>
+                </div>
+                <div class="row  mt-2">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a % da cobertura.">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row  mt-2">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a % da cobertura.">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row  mt-2">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a % da cobertura.">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="col-2">
                 <label asp-for="ValorPremio" class="control-label pt-2" style="font-size:20px;">Premio</label>
