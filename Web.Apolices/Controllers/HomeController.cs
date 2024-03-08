@@ -45,7 +45,7 @@ namespace Apolices.Web.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Create(SeguroModel model, string frequenciaPagamento)
+        public async Task<IActionResult> Create(SeguroModel model, string frequenciaPagamento, string hddCobertura)
         {
             model.FrequenciaPagamento = frequenciaPagamento;
             if (ModelState.IsValid)
