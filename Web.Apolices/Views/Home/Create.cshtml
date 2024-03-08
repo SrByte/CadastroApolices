@@ -29,9 +29,9 @@
                     <span asp-validation-for="NumeroApolice" class="text-danger"></span>
                 </div>
                 <div class="col-md-2">
-                    <input type="button" value="Adicionar Cobertura" class="btn btn-success form-control" />
+                    <input type="button" value="Adicionar Cobertura" class="btn btn-secondary form-control" />
                 </div>
-            </div>           
+            </div>
             <div class="container mt-1 mb-4">
                 <div class="row">
                     <div class="col-2"></div>
@@ -41,7 +41,7 @@
                     <div class="col">
                         <label class="control-label pt-2 form-label">Capital Segurado</label>
                     </div>
-                    <div class="col">                       
+                    <div class="col">
                     </div>
                 </div>
                 <div class="row  mt-2">
@@ -50,7 +50,7 @@
                         <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a % da cobertura.">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite o valor.">
                     </div>
                     <div class="col">
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
@@ -64,7 +64,7 @@
                         <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a % da cobertura.">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite o valor.">
                     </div>
                     <div class="col">
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
@@ -78,7 +78,7 @@
                         <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a % da cobertura.">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite o valor.">
                     </div>
                     <div class="col">
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
@@ -102,13 +102,73 @@
                 <input asp-for="DataAquisicaoApolice" class="form-control" id="dataAquisicaoApolice" oninput="formatarData(this)" maxlength="10" />
                 <span asp-validation-for="DataAquisicaoApolice" class="text-danger"></span>
             </div>
+            <div class="row">
+                <div class="col-2">
+                    <label asp-for="FrequenciaPagamento" class="control-label pt-2" style="font-size:20px;">Frequência de Pagto</label>
+                </div>
+                <div class="col-6 pb-3" style="padding-top:4px;">
+                    @Html.DropDownList("frequenciaPagamento")
+                </div>
+                <div class="col-md-2">
+                    <input type="button" value="Adicionar Benificiário" class="btn btn-secondary form-control" />
+                </div>
+            </div>
+            <div class="container mt-1 mb-4">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label">Beneficiário</label>
+                    </div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label">% Benefício</label>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+                <div class="row  mt-2">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite um nome.">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite uma porcentagem.">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row  mt-2">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite um nome.">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite uma porcentagem.">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row  mt-2">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite um nome.">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="cobertura" placeholder="Digite uma porcentagem.">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-            <div class="col-2">
-                <label asp-for="FrequenciaPagamento" class="control-label pt-2" style="font-size:20px;">Frequência de Pagto</label>
-            </div>
-            <div class="col-10 pb-3" style="padding-top:4px;">
-                @Html.DropDownList("frequenciaPagamento")
-            </div>
             <div class="col-2" style="padding-top:5px">
                 <label asp-for="Satisfacao" class="control-label pt-2" style="font-size:20px;">Por que você adquiriu a apólice? Está satisfeito com a apólice?</label>
             </div>
