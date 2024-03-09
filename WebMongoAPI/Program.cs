@@ -79,7 +79,7 @@ namespace WebMongoAPI
             app.MapPost("/api/v1/apolice", (MongoContext context, Seguro seguro) =>
                        {
                            context.Seguros.Add(seguro);
-                           context.SaveChanges();
+                           context.SaveChangesAsync();
                            return seguro;
                        });
 

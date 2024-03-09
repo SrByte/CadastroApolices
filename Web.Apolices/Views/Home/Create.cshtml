@@ -2,14 +2,15 @@
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<input type="hidden" id="hddContador" name="hddContador" value="0" />
 
 <form asp-action="Create" asp-antiforgery="true">
     <br />
     @Html.AntiForgeryToken()
     <div class="container border p-3">
         <h1 class="text-primary">Cadastrar</h1>
-        <input type="hidden" id="hddCobertura" name="hddCobertura" />
-        <input type="hidden" id="hddBeneficiario" name="hddBeneficiario" />
+        <input type="hidden" id="hddCobertura" name="hddCobertura" value="0"/>
+        <input type="hidden" id="hddBeneficiario" name="hddBeneficiario" value="0" />
 
         <hr />
         <div class="row">
@@ -31,10 +32,10 @@
                     <span asp-validation-for="NumeroApolice" class="text-danger"></span>
                 </div>
                 <div class="col-md-2">
-                    <input type="button" value="Adicionar Cobertura" class="btn btn-secondary form-control" />
+                    <input type="button" value="Adicionar Cobertura" class="btn btn-secondary form-control" onclick="adicionarCobertura()" />
                 </div>
             </div>
-            <div class="container mt-1 mb-4">
+            <div class="container mt-1 mb-4 gridCobertura">
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col">
@@ -45,49 +46,7 @@
                     </div>
                     <div class="col">
                     </div>
-                </div>
-                <div class="row  mt-2">
-                    <div class="col-2"></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite o valor.">
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="row  mt-2">
-                    <div class="col-2"></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite o valor.">
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="row  mt-2">
-                    <div class="col-2"></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite a cobertura.">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite o valor.">
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </div>
-                </div>
+                </div>             
             </div>
             <div class="col-2">
                 <label asp-for="ValorPremio" class="control-label pt-2" style="font-size:17px;">Premio</label>
@@ -194,31 +153,101 @@
     <partial name="_ValidationScriptsPartial" />
     <script>
         function formatarData(input) {
-            // Remove qualquer caractere que não seja número
+          
             var valor = input.value.replace(/\D/g, '');
-
-            // Adiciona a barra de separação nas posições corretas
+           
             if (valor.length > 2 && valor.length <= 4) {
                 valor = valor.replace(/^(\d{2})(\d{2})/, '$1/$2');
             } else if (valor.length > 4) {
                 valor = valor.replace(/^(\d{2})(\d{2})(\d{4})/, '$1/$2/$3');
             }
-
-            // Atualiza o valor do campo de entrada
             input.value = valor;
         }
     </script>
 
     <script>
         function formatarValor(input) {
-            // Remove tudo que não for número ou vírgula
-            let valorFormatado = input.value.replace(/[^0-9,]/g, '');
-
-            // Substitui a vírgula por ponto se houver mais de uma vírgula
+            
+            let valorFormatado = input.value.replace(/[^0-9,]/g, '');         
             valorFormatado = valorFormatado.replace(/,+/g, ',');
-
-            // Atualiza o valor no campo
             input.value = valorFormatado;
+        }
+    </script>
+
+    <script>
+        function adicionarCobertura() {
+
+            // Obter o valor atual do campo hidden
+            var contadorAtual = document.getElementById('hddContador').value;
+
+          
+            // Incrementar o valor
+            contadorAtual = parseInt(contadorAtual) + 1;
+            // Atualizar o valor no campo hidden
+            document.getElementById('hddContador').value = contadorAtual;
+
+            var container = document.querySelector('.gridCobertura');
+
+            // Criar elementos
+            var divRow = document.createElement('div');
+            divRow.className = 'row mt-2';
+
+            // Criar coluna vazia
+            var divColVaziar = document.createElement('div');
+            divColVaziar.className = 'col-2';
+
+            divRow.appendChild(divColVaziar);
+
+
+            // Criar coluna Nome Cobertura
+            var divNomeCobertura = document.createElement('div');
+            divNomeCobertura.className = 'col';
+
+            var inputNomeCobertura = document.createElement('input');
+            inputNomeCobertura.type = 'text';
+            inputNomeCobertura.className = 'form-control';
+            inputNomeCobertura.id = 'nomeCobertura' + contadorAtual;
+            inputNomeCobertura.placeholder = 'Digite a cobertura.';
+
+            divNomeCobertura.appendChild(inputNomeCobertura);
+
+            // Criar coluna Valor Cobertura
+            var divValorCobertura = document.createElement('div');
+            divValorCobertura.className = 'col';
+
+            var inputValorCobertura = document.createElement('input');
+            inputValorCobertura.type = 'text';
+            inputValorCobertura.className = 'form-control';
+            inputValorCobertura.id = 'valorCobertura' + contadorAtual;
+            inputValorCobertura.placeholder = 'Digite o valor.';
+
+            divValorCobertura.appendChild(inputValorCobertura);
+            // Criar botão de delete
+            var divbotaoDelete = document.createElement('div');
+            divbotaoDelete.className = 'col';
+
+            var btnDelete = document.createElement('button');
+            btnDelete.type = 'button';
+            btnDelete.className = 'btn btn-danger';
+            btnDelete.setAttribute('data-toggle', 'modal');
+            btnDelete.setAttribute('data-target', '#confirmDeleteModal');
+            btnDelete.addEventListener('click', function () {
+                container.removeChild(divRow);
+            });
+
+            var iconTrash = document.createElement('i');
+            iconTrash.className = 'fas fa-trash-alt';
+            btnDelete.appendChild(iconTrash);
+            divbotaoDelete.appendChild(btnDelete);
+
+
+            // Adicionar os elementos ao contêiner
+            divRow.appendChild(divNomeCobertura);
+            divRow.appendChild(divValorCobertura);
+            divRow.appendChild(divbotaoDelete);
+
+            container.appendChild(divRow);
+         
         }
     </script>
 
