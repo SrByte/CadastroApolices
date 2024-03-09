@@ -148,7 +148,7 @@
 
             // Criar elementos
             var divRow = document.createElement('div');
-            divRow.className = 'row mt-2';
+            divRow.className = 'row mt-2 linhaCobertura';
 
             // Criar coluna vazia
             var divColVaziar = document.createElement('div');
@@ -288,7 +288,42 @@
         document.getElementById("apolices").addEventListener("submit", function (event) {
             event.preventDefault(); // Impede o envio padrão do formulário
 
-            alert('Sucesso irmão!!');
+            var erro = 1;
+
+            // Obtém todos os elementos com a classe "gridCobertura"
+            var gridCobertura = document.querySelector('.gridCobertura');
+          
+          //  Obtém todos os elementos filhos (rows) da classe "row" dentro de "gridCobertura"
+            var rows = gridCobertura.querySelectorAll('.row .linhaCobertura');
+          
+
+            // Itera sobre cada linha
+            rows.forEach(function (row) {
+            //     console.log("Inicio Linha");
+            //     // Obtém o ID do elemento "nomeCobertura" dentro da linha
+                var nomeCoberturaValue = row.querySelector('input[id^="nomeCobertura"]').value;
+               
+            //     // Obtém o valor do elemento "valorCobertura" dentro da linha
+                var valorCoberturaValue = row.querySelector('input[id^="valorCobertura"]').value;
+
+                alert(nomeCoberturaValue)
+                alert(valorCoberturaValue);
+
+            //     // Verifica se o ID contém "nomeCobertura" e exibe no console
+            //     if (nomeCoberturaId.includes("nomeCobertura")) {
+            //         console.log("ID do nomeCobertura:", nomeCoberturaId);
+            //     }
+
+            //     // Verifica se o valor existe e exibe no console
+            //     if (valorCoberturaValue) {
+            //         console.log("Valor do valorCobertura:", valorCoberturaValue);
+            //     }
+                console.log("Fim Linha")
+            });
+
+
+
+
             // // Captura a div pelo ID
             // var minhaDiv = document.getElementById("minhaDiv");
 
@@ -300,7 +335,11 @@
             // }
 
             // // Continue com o envio do formulário ou realize outras ações necessárias.
+
+            if (erro == 0) {
             event.currentTarget.submit();
+            }
+
         });
     </script>
 }
