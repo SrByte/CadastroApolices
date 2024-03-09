@@ -71,10 +71,10 @@
                     @Html.DropDownList("frequenciaPagamento")
                 </div>
                 <div class="col-md-2">
-                    <input type="button" value="Adicionar Benificiário" class="btn btn-secondary form-control" />
+                    <input type="button" value="Adicionar Benificiário" class="btn btn-secondary form-control" onclick="adicionarBeneficiario()" />
                 </div>
             </div>
-            <div class="container mt-1 mb-4">
+            <div class="container mt-1 mb-4 gridBeneficiario">
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col">
@@ -85,49 +85,7 @@
                     </div>
                     <div class="col">
                     </div>
-                </div>
-                <div class="row  mt-2">
-                    <div class="col-2"></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite um nome.">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite uma porcentagem.">
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="row  mt-2">
-                    <div class="col-2"></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite um nome.">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite uma porcentagem.">
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="row  mt-2">
-                    <div class="col-2"></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite um nome.">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="cobertura" placeholder="Digite uma porcentagem.">
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </div>
-                </div>
+                </div>        
             </div>
 
             <div class="col-2" style="padding-top:5px">
@@ -250,5 +208,80 @@
          
         }
     </script>
+    <script>
+        function adicionarBeneficiario() {
 
+            // Obter o valor atual do campo hidden
+            var contadorAtual = document.getElementById('hddContador').value;
+
+
+            // Incrementar o valor
+            contadorAtual = parseInt(contadorAtual) + 1;
+            // Atualizar o valor no campo hidden
+            document.getElementById('hddContador').value = contadorAtual;
+
+            var container = document.querySelector('.gridBeneficiario');
+
+            // Criar elementos
+            var divRow = document.createElement('div');
+            divRow.className = 'row mt-2';
+
+            // Criar coluna vazia
+            var divColVaziar = document.createElement('div');
+            divColVaziar.className = 'col-2';
+
+            divRow.appendChild(divColVaziar);
+
+
+            // Criar coluna Nome Beneficiario
+            var divNomeBeneficiario = document.createElement('div');
+            divNomeBeneficiario.className = 'col';
+
+            var inputNomeBeneficiario = document.createElement('input');
+            inputNomeBeneficiario.type = 'text';
+            inputNomeBeneficiario.className = 'form-control';
+            inputNomeBeneficiario.id = 'nomeBeneficiario' + contadorAtual;
+            inputNomeBeneficiario.placeholder = 'Digite um nome para o Beneficiário.';
+
+            divNomeBeneficiario.appendChild(inputNomeBeneficiario);
+
+            // Criar coluna Porcentagem Beneficiário
+            var divPorcentagemBeneficiario = document.createElement('div');
+            divPorcentagemBeneficiario.className = 'col';
+
+            var inputPorcentagemBeneficiario = document.createElement('input');
+            inputPorcentagemBeneficiario.type = 'text';
+            inputPorcentagemBeneficiario.className = 'form-control';
+            inputPorcentagemBeneficiario.id = 'porcentagemBeneficiario' + contadorAtual;
+            inputPorcentagemBeneficiario.placeholder = 'Digite a Porcentagem.';
+
+            divPorcentagemBeneficiario.appendChild(inputPorcentagemBeneficiario);
+            // Criar botão de delete
+            var divbotaoDelete = document.createElement('div');
+            divbotaoDelete.className = 'col';
+
+            var btnDelete = document.createElement('button');
+            btnDelete.type = 'button';
+            btnDelete.className = 'btn btn-danger';
+            btnDelete.setAttribute('data-toggle', 'modal');
+            btnDelete.setAttribute('data-target', '#confirmDeleteModal');
+            btnDelete.addEventListener('click', function () {
+                container.removeChild(divRow);
+            });
+
+            var iconTrash = document.createElement('i');
+            iconTrash.className = 'fas fa-trash-alt';
+            btnDelete.appendChild(iconTrash);
+            divbotaoDelete.appendChild(btnDelete);
+
+
+            // Adicionar os elementos ao contêiner
+            divRow.appendChild(divNomeBeneficiario);
+            divRow.appendChild(divPorcentagemBeneficiario);
+            divRow.appendChild(divbotaoDelete);
+
+            container.appendChild(divRow);
+
+        }
+    </script>
 }
