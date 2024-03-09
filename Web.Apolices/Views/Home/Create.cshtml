@@ -4,7 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <input type="hidden" id="hddContador" name="hddContador" value="0" />
 
-<form asp-action="Create" asp-antiforgery="true">
+<form asp-action="Create" id="apolices" asp-antiforgery="true">
     <br />
     @Html.AntiForgeryToken()
     <div class="container border p-3">
@@ -283,5 +283,24 @@
             container.appendChild(divRow);
 
         }
+    </script>
+    <script>
+        document.getElementById("apolices").addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            alert('Sucesso irmão!!');
+            // // Captura a div pelo ID
+            // var minhaDiv = document.getElementById("minhaDiv");
+
+            // // Varre os elementos da div
+            // for (var i = 0; i < minhaDiv.children.length; i++) {
+            //     var elemento = minhaDiv.children[i];
+            //     // Faça o que precisa com cada elemento, por exemplo:
+            //     console.log(elemento);
+            // }
+
+            // // Continue com o envio do formulário ou realize outras ações necessárias.
+            event.currentTarget.submit();
+        });
     </script>
 }
