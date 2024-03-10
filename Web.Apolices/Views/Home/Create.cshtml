@@ -9,7 +9,7 @@
     @Html.AntiForgeryToken()
     <div class="container border p-3">
         <h1 class="text-primary">Cadastrar</h1>
-        <input type="hidden" id="hddCobertura" name="hddCobertura" value="0"/>
+        <input type="hidden" id="hddCobertura" name="hddCobertura" value="0" />
         <input type="hidden" id="hddBeneficiario" name="hddBeneficiario" value="0" />
 
         <hr />
@@ -46,7 +46,7 @@
                     </div>
                     <div class="col">
                     </div>
-                </div>             
+                </div>
             </div>
             <div class="col-2">
                 <label asp-for="ValorPremio" class="control-label pt-2" style="font-size:17px;">Premio</label>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="col">
                     </div>
-                </div>        
+                </div>
             </div>
 
             <div class="col-2" style="padding-top:5px">
@@ -111,9 +111,9 @@
     <partial name="_ValidationScriptsPartial" />
     <script>
         function formatarData(input) {
-          
+
             var valor = input.value.replace(/\D/g, '');
-           
+
             if (valor.length > 2 && valor.length <= 4) {
                 valor = valor.replace(/^(\d{2})(\d{2})/, '$1/$2');
             } else if (valor.length > 4) {
@@ -125,8 +125,8 @@
 
     <script>
         function formatarValor(input) {
-            
-            let valorFormatado = input.value.replace(/[^0-9,]/g, '');         
+
+            let valorFormatado = input.value.replace(/[^0-9,]/g, '');
             valorFormatado = valorFormatado.replace(/,+/g, ',');
             input.value = valorFormatado;
         }
@@ -138,7 +138,7 @@
             // Obter o valor atual do campo hidden
             var contadorAtual = document.getElementById('hddContador').value;
 
-          
+
             // Incrementar o valor
             contadorAtual = parseInt(contadorAtual) + 1;
             // Atualizar o valor no campo hidden
@@ -205,7 +205,7 @@
             divRow.appendChild(divbotaoDelete);
 
             container.appendChild(divRow);
-         
+
         }
     </script>
     <script>
@@ -286,59 +286,78 @@
     </script>
     <script>
         document.getElementById("apolices").addEventListener("submit", function (event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
+            event.preventDefault();
+            var erroCobertura = 0;
+            var erroBeneficiario = 0;
 
-            var erro = 1;
 
-            // Obtém todos os elementos com a classe "gridCobertura"
             var gridCobertura = document.querySelector('.gridCobertura');
           
-          //  Obtém todos os elementos filhos (rows) da classe "row" dentro de "gridCobertura"
             var rows = gridCobertura.querySelectorAll('.row .linhaCobertura');
-          
 
-            // Itera sobre cada linha
+            var coberturas = '';
+   
             rows.forEach(function (row) {
-            //     console.log("Inicio Linha");
-            //     // Obtém o ID do elemento "nomeCobertura" dentro da linha
+              
                 var nomeCoberturaValue = row.querySelector('input[id^="nomeCobertura"]').value;
                
-            //     // Obtém o valor do elemento "valorCobertura" dentro da linha
                 var valorCoberturaValue = row.querySelector('input[id^="valorCobertura"]').value;
+                if (coberturas == '') {
 
-                alert(nomeCoberturaValue)
-                alert(valorCoberturaValue);
+                    if (nomeCoberturaValue.trim() == '') {
+                        coberturas = '=;';
+                        erroCobertura = 1;
+                    }
+                    else {
+                        coberturas = nomeCoberturaValue.trim() + ';';
+                    }
 
-            //     // Verifica se o ID contém "nomeCobertura" e exibe no console
-            //     if (nomeCoberturaId.includes("nomeCobertura")) {
-            //         console.log("ID do nomeCobertura:", nomeCoberturaId);
-            //     }
+                    if (valorCoberturaValue.trim() == '') {
+                        coberturas += '=';
+                        erroCobertura = 1;
+                    }
+                    else {
+                        coberturas += valorCoberturaValue.trim();
+                    }
+                }
+                else {
+                    if (nomeCoberturaValue.trim() == '') {
+                        coberturas += '|=;';
+                        erroCobertura = 1;
+                    }
+                    else {
+                        coberturas += '|' + nomeCoberturaValue.trim() + ';';
+                    }
 
-            //     // Verifica se o valor existe e exibe no console
-            //     if (valorCoberturaValue) {
-            //         console.log("Valor do valorCobertura:", valorCoberturaValue);
-            //     }
-                console.log("Fim Linha")
+                    if (valorCoberturaValue.trim() == '') {
+                        coberturas = '=';
+                        erroCobertura = 1;
+                    }
+                    else {
+                        coberturas += valorCoberturaValue.trim();
+
+                    }
+
+                }             
             });
 
+            document.getElementById('hddCobertura').value = coberturas;
+     
 
-
-
-            // // Captura a div pelo ID
-            // var minhaDiv = document.getElementById("minhaDiv");
-
-            // // Varre os elementos da div
-            // for (var i = 0; i < minhaDiv.children.length; i++) {
-            //     var elemento = minhaDiv.children[i];
-            //     // Faça o que precisa com cada elemento, por exemplo:
-            //     console.log(elemento);
-            // }
-
-            // // Continue com o envio do formulário ou realize outras ações necessárias.
-
-            if (erro == 0) {
-            event.currentTarget.submit();
+            if (erroCobertura == 0 && erroBeneficiario == 0) {
+                 event.currentTarget.submit();
             }
+            else if (erroCobertura == 1 && erroBeneficiario == 1) {
+                alert('existem campos em branco para as Coberturas e Beneficiarios!!!')
+            }
+            else if (erroCobertura == 1) {
+                alert('existem campos em branco para as Coberturas!!!')
+
+            }
+            else if (erroBeneficiario == 1) {
+                alert('existem campos em branco para os Beneficiarios!!!')
+            }
+
 
         });
     </script>
