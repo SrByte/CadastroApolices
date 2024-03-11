@@ -1,4 +1,7 @@
 ﻿@model Apolices.Web.Models.SeguroModel
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<input type="hidden" id="hddContador" name="hddContador" value="0" />
 
 <form asp-action="Update" asp-antiforgery="true">
     @Html.AntiForgeryToken()
@@ -6,23 +9,63 @@
     <br />
     <div class="container border p-3">
         <h1 class="text-primary">Atualizar</h1>
-
+        <input type="hidden" id="hddCobertura" name="hddCobertura" value="0" />
+        <input type="hidden" id="hddBeneficiario" name="hddBeneficiario" value="0" />
         <hr />
         <div class="row">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
+
             <div class="col-2">
                 <label asp-for="Seguradora" class="control-label pt-2" style="font-size:17px"> Seguradora</label>
             </div>
             <div class="col-10 pb-3">
-                <input asp-for="Seguradora"  class="form-control" />
+                <input asp-for="Seguradora" class="form-control" />
             </div>
-            <div class="col-2">
-                <label asp-for="NumeroApolice" class="control-label pt-2" style="font-size:17px"> Número da Apólice</label>
+            <div class="row">
+                <div class="col-2">
+                    <label asp-for="NumeroApolice" class="control-label pt-2" style="font-size:17px;">No. Apólice</label>
+                </div>
+                <div class="col-md-6 pb-3">
+                    <input asp-for="NumeroApolice" class="form-control" />
+                    <span asp-validation-for="NumeroApolice" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <input type="button" value="Adicionar Cobertura" class="btn btn-secondary form-control" onclick="adicionarCobertura()" />
+                </div>
             </div>
-            <div class="col-10 pb-3">
-                <input asp-for="NumeroApolice"  class="form-control" />
+            <div class="container mt-1 mb-4 gridCobertura">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label" style="font-weight:bolder">Cobertura</label>
+                    </div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label" style="font-weight:bolder">Capital Segurado</label>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+                <!-- Área de Varredura da lista de Coberturas -->
+                @if (Model.Coberturas != null && Model.Coberturas.Any())
+                {
+                    foreach (var cobertura in Model.Coberturas)
+                    {
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col">
+                                <label class="control-label pt-2 form-label">@cobertura.Descricao</label>
+                            </div>
+                            <div class="col">
+                                <label class="control-label pt-2 form-label">@cobertura.CapitalSegurado</label>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    }
+                }
+                <!-- Fim da Área de Varredura da lista de Coberturas -->
             </div>
+
             <div class="col-2">
                 <label asp-for="ValorPremio" class="control-label pt-2" style="font-size:20px;">Premio</label>
             </div>
@@ -39,11 +82,48 @@
                 <span asp-validation-for="DataAquisicaoApolice" class="text-danger"></span>
             </div>
 
-            <div class="col-2">
-                <label asp-for="FrequenciaPagamento" class="control-label pt-2" style="font-size:20px;">Frequência de Pagto</label>
+            <div class="row">
+                <div class="col-2">
+                    <label asp-for="FrequenciaPagamento" class="control-label pt-2" style="font-size:17px;">Frequência de Pagto</label>
+                </div>
+                <div class="col-6 pb-3" style="padding-top:4px;">
+                    @Html.DropDownList("frequenciaPagamento")
+                </div>
+                <div class="col-md-2">
+                    <input type="button" value="Adicionar Benificiário" class="btn btn-secondary form-control" onclick="adicionarBeneficiario()" />
+                </div>
             </div>
-            <div class="col-10 pb-3" style="padding-top:4px;">
-                @Html.DropDownList("frequenciaPagamento")
+            <div class="container mt-1 mb-4 gridBeneficiario">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label" style="font-weight:bolder">Beneficiário</label>
+                    </div>
+                    <div class="col">
+                        <label class="control-label pt-2 form-label" style="font-weight:bolder">% Benefício</label>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+                <!-- Área de Varredura da lista de Beneficiário -->
+                @if (Model.Beneficiarios != null && Model.Beneficiarios.Any())
+                {
+                    foreach (var beneficiario in Model.Beneficiarios)
+                    {
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col">
+                                <label class="control-label pt-2 form-label">@beneficiario.Nome</label>
+                            </div>
+                            <div class="col">
+                                <label class="control-label pt-2 form-label">@beneficiario.PercentualBeneficio</label>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+                    }
+                }
+                <!-- Fim da Área de Varredura da lista de Beneficiário -->
             </div>
             <div class="col-2" style="padding-top:5px">
                 <label asp-for="Satisfacao" class="control-label pt-2" style="font-size:20px;">Por que você adquiriu a apólice? Está satisfeito com a apólice?</label>
