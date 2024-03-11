@@ -70,9 +70,9 @@ namespace WebMongoAPI
                  return user;
              });
 
-            app.MapGet("/users", (MongoContext context) =>
+            app.MapGet("/users",async (MongoContext context) =>
             {
-                var x = context.Users.ToList();
+                var x = context.Users.ToListAsync();
                 return x;
             });
 
