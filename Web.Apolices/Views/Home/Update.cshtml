@@ -1,7 +1,6 @@
 ﻿@model Apolices.Web.Models.SeguroModel
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-<input type="hidden" id="hddContador" name="hddContador" value="0" />
 
 <form asp-action="Update" asp-antiforgery="true">
     @Html.AntiForgeryToken()
@@ -48,22 +47,29 @@
                 <!-- Área de Varredura da lista de Coberturas -->
                 @if (Model.Coberturas != null && Model.Coberturas.Any())
                 {
+                     var contador = 0; 
                     foreach (var cobertura in Model.Coberturas)
                     {
-                        <div class="row">
+                        contador++;
+
+                        <div class="row  mt-2">
                             <div class="col-2"></div>
                             <div class="col">
-                                <label class="control-label pt-2 form-label">@cobertura.Descricao</label>
+                                <input type="text" class="form-control" id="cobertura_@contador" value=@cobertura.Descricao placeholder="Digite a cobertura.">
                             </div>
                             <div class="col">
-                                <label class="control-label pt-2 form-label">@cobertura.CapitalSegurado</label>
+                                <input type="text" class="form-control" id="cobertura_@contador" value=@cobertura.CapitalSegurado placeholder="Digite a % da cobertura.">
                             </div>
                             <div class="col">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal" onclick="excluirLinha(this)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
                             </div>
                         </div>
                     }
                 }
                 <!-- Fim da Área de Varredura da lista de Coberturas -->
+
             </div>
 
             <div class="col-2">
@@ -161,7 +167,6 @@
             input.value = valor;
         }
     </script>
-
     <script>
         function formatarValor(input) {
             // Remove tudo que não for número ou vírgula
@@ -172,6 +177,165 @@
 
             // Atualiza o valor no campo
             input.value = valorFormatado;
+        }
+    </script>
+    <script>
+        function adicionarBeneficiario() {
+
+            // Obter o valor atual do campo hidden
+            var contadorAtual = document.getElementById('hddContador').value;
+
+
+            // Incrementar o valor
+            contadorAtual = parseInt(contadorAtual) + 1;
+            // Atualizar o valor no campo hidden
+            document.getElementById('hddContador').value = contadorAtual;
+
+            var container = document.querySelector('.gridBeneficiario');
+
+            // Criar elementos
+            var divRow = document.createElement('div');
+            divRow.className = 'row mt-2 linhaBeneficiario';
+
+            // Criar coluna vazia
+            var divColVaziar = document.createElement('div');
+            divColVaziar.className = 'col-2';
+
+            divRow.appendChild(divColVaziar);
+
+
+            // Criar coluna Nome Beneficiario
+            var divNomeBeneficiario = document.createElement('div');
+            divNomeBeneficiario.className = 'col';
+
+            var inputNomeBeneficiario = document.createElement('input');
+            inputNomeBeneficiario.type = 'text';
+            inputNomeBeneficiario.className = 'form-control';
+            inputNomeBeneficiario.id = 'nomeBeneficiario' + contadorAtual;
+            inputNomeBeneficiario.placeholder = 'Digite um nome para o Beneficiário.';
+
+            divNomeBeneficiario.appendChild(inputNomeBeneficiario);
+
+            // Criar coluna Porcentagem Beneficiário
+            var divPorcentagemBeneficiario = document.createElement('div');
+            divPorcentagemBeneficiario.className = 'col';
+
+            var inputPorcentagemBeneficiario = document.createElement('input');
+            inputPorcentagemBeneficiario.type = 'text';
+            inputPorcentagemBeneficiario.className = 'form-control';
+            inputPorcentagemBeneficiario.id = 'porcentagemBeneficiario' + contadorAtual;
+            inputPorcentagemBeneficiario.placeholder = 'Digite a Porcentagem.';
+
+            divPorcentagemBeneficiario.appendChild(inputPorcentagemBeneficiario);
+            // Criar botão de delete
+            var divbotaoDelete = document.createElement('div');
+            divbotaoDelete.className = 'col';
+
+            var btnDelete = document.createElement('button');
+            btnDelete.type = 'button';
+            btnDelete.className = 'btn btn-danger';
+            btnDelete.setAttribute('data-toggle', 'modal');
+            btnDelete.setAttribute('data-target', '#confirmDeleteModal');
+            btnDelete.addEventListener('click', function () {
+                container.removeChild(divRow);
+            });
+
+            var iconTrash = document.createElement('i');
+            iconTrash.className = 'fas fa-trash-alt';
+            btnDelete.appendChild(iconTrash);
+            divbotaoDelete.appendChild(btnDelete);
+
+
+            // Adicionar os elementos ao contêiner
+            divRow.appendChild(divNomeBeneficiario);
+            divRow.appendChild(divPorcentagemBeneficiario);
+            divRow.appendChild(divbotaoDelete);
+
+            container.appendChild(divRow);
+
+        }
+    </script>
+
+    <script>
+        function adicionarCobertura() {
+
+            // Obter o valor atual do campo hidden
+            var contadorAtual = document.getElementById('hddContador').value;
+
+
+            // Incrementar o valor
+            contadorAtual = parseInt(contadorAtual) + 1;
+            // Atualizar o valor no campo hidden
+            document.getElementById('hddContador').value = contadorAtual;
+
+            var container = document.querySelector('.gridCobertura');
+
+            // Criar elementos
+            var divRow = document.createElement('div');
+            divRow.className = 'row mt-2 linhaCobertura';
+
+            // Criar coluna vazia
+            var divColVaziar = document.createElement('div');
+            divColVaziar.className = 'col-2';
+
+            divRow.appendChild(divColVaziar);
+
+
+            // Criar coluna Nome Cobertura
+            var divNomeCobertura = document.createElement('div');
+            divNomeCobertura.className = 'col';
+
+            var inputNomeCobertura = document.createElement('input');
+            inputNomeCobertura.type = 'text';
+            inputNomeCobertura.className = 'form-control';
+            inputNomeCobertura.id = 'nomeCobertura' + contadorAtual;
+            inputNomeCobertura.placeholder = 'Digite a cobertura.';
+
+            divNomeCobertura.appendChild(inputNomeCobertura);
+
+            // Criar coluna Valor Cobertura
+            var divValorCobertura = document.createElement('div');
+            divValorCobertura.className = 'col';
+
+            var inputValorCobertura = document.createElement('input');
+            inputValorCobertura.type = 'text';
+            inputValorCobertura.className = 'form-control';
+            inputValorCobertura.id = 'valorCobertura' + contadorAtual;
+            inputValorCobertura.placeholder = 'Digite o valor.';
+
+            divValorCobertura.appendChild(inputValorCobertura);
+            // Criar botão de delete
+            var divbotaoDelete = document.createElement('div');
+            divbotaoDelete.className = 'col';
+
+            var btnDelete = document.createElement('button');
+            btnDelete.type = 'button';
+            btnDelete.className = 'btn btn-danger';
+            btnDelete.setAttribute('data-toggle', 'modal');
+            btnDelete.setAttribute('data-target', '#confirmDeleteModal');
+            btnDelete.addEventListener('click', function () {
+                container.removeChild(divRow);
+            });
+
+            var iconTrash = document.createElement('i');
+            iconTrash.className = 'fas fa-trash-alt';
+            btnDelete.appendChild(iconTrash);
+            divbotaoDelete.appendChild(btnDelete);
+
+
+            // Adicionar os elementos ao contêiner
+            divRow.appendChild(divNomeCobertura);
+            divRow.appendChild(divValorCobertura);
+            divRow.appendChild(divbotaoDelete);
+
+            container.appendChild(divRow);
+
+        }
+    </script>
+    <script>
+        function excluirLinha(btn) {
+            var row = btn.closest('.row');
+            row.remove();
         }
     </script>
 
