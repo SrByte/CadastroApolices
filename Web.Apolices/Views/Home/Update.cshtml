@@ -125,7 +125,7 @@
                                 <input type="text" class="form-control" id="nomeBeneficiario_@contador" placeholder="Digite um nome." value=@beneficiario.Nome>
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" id="porcentagemBeneficiario_@contador" placeholder="Digite uma porcentagem." value=@beneficiario.PercentualBeneficio>
+                                <input type="text" class="form-control" id="porcentagemBeneficiario_@contador" maxlength="3" oninput="formatarValor(this);" placeholder="Digite uma porcentagem." value=@beneficiario.PercentualBeneficio>
                             </div>
                             <div class="col">
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal" onclick="excluirLinha(this)">
@@ -231,6 +231,10 @@
             inputPorcentagemBeneficiario.className = 'form-control';
             inputPorcentagemBeneficiario.id = 'porcentagemBeneficiario' + contadorAtual;
             inputPorcentagemBeneficiario.placeholder = 'Digite a Porcentagem.';
+            inputPorcentagemBeneficiario.maxLength = 3;
+            inputPorcentagemBeneficiario.oninput = function () {
+                formatarValor(this);
+            };
 
             divPorcentagemBeneficiario.appendChild(inputPorcentagemBeneficiario);
             // Criar botão de delete

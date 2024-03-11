@@ -254,6 +254,11 @@
             inputPorcentagemBeneficiario.className = 'form-control';
             inputPorcentagemBeneficiario.id = 'porcentagemBeneficiario' + contadorAtual;
             inputPorcentagemBeneficiario.placeholder = 'Digite a Porcentagem.';
+            inputPorcentagemBeneficiario.maxLength = 3;
+            inputPorcentagemBeneficiario.oninput = function () {
+                formatarValor(this);
+            };
+            
 
             divPorcentagemBeneficiario.appendChild(inputPorcentagemBeneficiario);
             // Criar botão de delete
