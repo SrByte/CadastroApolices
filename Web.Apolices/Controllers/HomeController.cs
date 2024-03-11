@@ -129,8 +129,11 @@ namespace Apolices.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(SeguroModel model)
+        public async Task<IActionResult> Update(SeguroModel model, string frequenciaPagamento, string hddCobertura, string hddBeneficiario)
         {
+            model.FrequenciaPagamento = frequenciaPagamento;
+            model.Coberturas = (List<CoberturaModel>)RestornaLista(hddCobertura);
+            model.Beneficiarios = (List<BeneficiarioModel>)RestornaLista(hddBeneficiario, false);
 
             if (ModelState.IsValid)
             {

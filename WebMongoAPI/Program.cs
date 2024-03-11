@@ -72,32 +72,40 @@ namespace WebMongoAPI
 
             app.MapGet("/users", (MongoContext context) =>
             {
-                var x= context.Users.ToList();
+                var x = context.Users.ToList();
                 return x;
             });
 
-            app.MapPost("/api/v1/apolice", (MongoContext context, Seguro seguro) =>
+            app.MapPost("/api/v1/apolice", async (MongoContext context, Seguro seguro) =>
                        {
                            context.Seguros.Add(seguro);
-                           context.SaveChangesAsync();
+                           await context.SaveChangesAsync();
                            return seguro;
                        });
 
-            app.MapPut("/api/v1/apolice", (MongoContext context, Seguro seguro) =>
-            {              
-                context.Seguros.Update(seguro);
-                context.SaveChangesAsync();
+            app.MapPut("/api/v1/apolice", async (MongoContext context, Seguro seguro) =>
+            {
+
+                // Anexa a entidade ao contexto
+                context.Seguros.Attach(seguro);
+
+                // Marca a entidade como modificada
+                context.Entry(seguro).State = EntityState.Modified;
+
+                // Salva as alterações no banco de dados
+                await context.SaveChangesAsync();
+
                 return seguro;
             });
 
-            app.MapGet("/api/v1/apolice", (MongoContext context) =>
+            app.MapGet("/api/v1/apolice", async (MongoContext context) =>
             {
-                return context.Seguros.ToList();
+                return await context.Seguros.ToListAsync();
             });
 
-            app.MapGet("/api/v1/apolice/{id}", (string id, MongoContext context) =>
+            app.MapGet("/api/v1/apolice/{id}", async (string id, MongoContext context) =>
             {
-                var apolice = context.Seguros.Where(x => x.Id == id).FirstOrDefault();
+                var apolice = await context.Seguros.Where(x => x.Id == id).FirstOrDefaultAsync();
 
                 if (apolice != null)
                 {
@@ -111,15 +119,15 @@ namespace WebMongoAPI
                 }
             });
 
-            app.MapDelete("/api/v1/apolice/{id}", (string id, MongoContext context) =>
+            app.MapDelete("/api/v1/apolice/{id}", async (string id, MongoContext context) =>
             {
 
-                var apolice = context.Seguros.Where(x => x.Id == id).FirstOrDefault();
+                var apolice = await context.Seguros.Where(x => x.Id == id).FirstOrDefaultAsync();
 
                 if (apolice != null)
                 {
                     context.Seguros.Remove(apolice);
-                    context.SaveChangesAsync();
+                    await context.SaveChangesAsync();
                 }
 
 
