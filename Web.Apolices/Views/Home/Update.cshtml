@@ -1,7 +1,7 @@
 ﻿@model Apolices.Web.Models.SeguroModel
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-
+<input type="hidden" id="hddContador" name="hddContador" value="0" />
 <form asp-action="Update" asp-antiforgery="true">
     @Html.AntiForgeryToken()
     <input asp-for="Id" hidden>
@@ -52,7 +52,7 @@
                     {
                         contador++;
 
-                        <div class="row  mt-2">
+                        <div class="row  mt-2  linhaCobertura">
                             <div class="col-2"></div>
                             <div class="col">
                                 <input type="text" class="form-control" id="cobertura_@contador" value=@cobertura.Descricao placeholder="Digite a cobertura.">
@@ -260,15 +260,13 @@
         function adicionarCobertura() {
 
             // Obter o valor atual do campo hidden
-            var contadorAtual = document.getElementById('hddContador').value;
-
+            var container = document.querySelector('.gridCobertura');
+            var contadorAtual = container.querySelectorAll('.row .linhaCobertura').length;
 
             // Incrementar o valor
             contadorAtual = parseInt(contadorAtual) + 1;
             // Atualizar o valor no campo hidden
             document.getElementById('hddContador').value = contadorAtual;
-
-            var container = document.querySelector('.gridCobertura');
 
             // Criar elementos
             var divRow = document.createElement('div');
@@ -292,6 +290,7 @@
             inputNomeCobertura.placeholder = 'Digite a cobertura.';
 
             divNomeCobertura.appendChild(inputNomeCobertura);
+            // alert(divNomeCobertura.outerHTML);
 
             // Criar coluna Valor Cobertura
             var divValorCobertura = document.createElement('div');
