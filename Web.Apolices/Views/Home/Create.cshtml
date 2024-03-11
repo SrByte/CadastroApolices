@@ -224,7 +224,7 @@
 
             // Criar elementos
             var divRow = document.createElement('div');
-            divRow.className = 'row mt-2';
+            divRow.className = 'row mt-2 linhaBeneficiario';
 
             // Criar coluna vazia
             var divColVaziar = document.createElement('div');
@@ -291,16 +291,18 @@
             var erroBeneficiario = 0;
 
 
-            var gridCobertura = document.querySelector('.gridCobertura');
-          
-            var rows = gridCobertura.querySelectorAll('.row .linhaCobertura');
+            var grid = document.querySelector('.gridCobertura');
+            var rows = grid.querySelectorAll('.row .linhaCobertura');
 
             var coberturas = '';
-   
+            var beneficiarios = '';
+
+            // Trata Cobertura
+
             rows.forEach(function (row) {
-              
+
                 var nomeCoberturaValue = row.querySelector('input[id^="nomeCobertura"]').value;
-               
+
                 var valorCoberturaValue = row.querySelector('input[id^="valorCobertura"]').value;
                 if (coberturas == '') {
 
@@ -337,11 +339,65 @@
                         coberturas += valorCoberturaValue.trim();
                     }
 
-                }             
+                }
             });
 
             document.getElementById('hddCobertura').value = coberturas;
-           // alert(coberturas);
+
+
+            //Trata Beneficiario
+
+            grid = document.querySelector('.gridBeneficiario');
+
+            rows = grid.querySelectorAll('.row .linhaBeneficiario');
+
+
+            rows.forEach(function (row) {
+
+                var nomeBeneficiarioValue = row.querySelector('input[id^="nomeBeneficiario"]').value;
+
+                var valorBeneficiarioValue = row.querySelector('input[id^="porcentagemBeneficiario"]').value;
+
+            
+                if (beneficiarios == '') {
+
+                    if (nomeBeneficiarioValue.trim() == '') {
+                        beneficiarios = '=;';
+                        erroBeneficiario = 1;
+                    }
+                    else {
+                        beneficiarios = nomeBeneficiarioValue.trim() + ';';
+                    }
+
+                    if (valorBeneficiarioValue.trim() == '') {
+                        beneficiarios += '=';
+                        erroBeneficiario = 1;
+                    }
+                    else {
+                        beneficiarios += valorBeneficiarioValue.trim();
+                    }
+                }
+                else {
+                    if (nomeBeneficiarioValue.trim() == '') {
+                        beneficiarios += '|=;';
+                        erroBeneficiario = 1;
+                    }
+                    else {
+                        beneficiarios += '|' + nomeBeneficiarioValue.trim() + ';';
+                    }
+
+                    if (valorBeneficiarioValue.trim() == '') {
+                        beneficiarios = '=';
+                        erroBeneficiario = 1;
+                    }
+                    else {
+                        beneficiarios += valorBeneficiarioValue.trim();
+                    }
+                }
+            });
+
+            document.getElementById('hddBeneficiario').value = beneficiarios;
+
 
             if (erroCobertura == 0 && erroBeneficiario == 0) {
                 event.currentTarget.submit();
