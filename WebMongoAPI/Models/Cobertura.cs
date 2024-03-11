@@ -8,5 +8,5 @@ public class Cobertura
 	[BsonRepresentation(BsonType.ObjectId)]
 	public string? Id { get; set; }
 	public string Descricao { get; set; }
-    public decimal CapitalSegurado { get; set; }
+    public string CapitalSegurado { get; set; }
 }

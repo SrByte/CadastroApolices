@@ -43,11 +43,64 @@ namespace Apolices.Web.Controllers
             return View();
         }
 
+        private object RestornaLista(string lista, bool cobertura = true)
+        {
+            var listaCoberturas = new List<CoberturaModel>();
+            var listaBeneficiarios = new List<BeneficiarioModel>();
 
+            CoberturaModel? coberturaModel;
+            BeneficiarioModel? beneficiarioModel;
+
+
+            string[] items = lista.Split('|');
+
+
+            switch (cobertura)
+            {
+                case true:
+
+                    foreach (var par in items)
+                    {
+                        string[] chaveValor = par.Split(';');
+
+                        coberturaModel = new CoberturaModel
+                        {
+                            Id = ObjectId.GenerateNewId().ToString(),
+                            Descricao = chaveValor[0],
+                            CapitalSegurado = chaveValor[1]
+                        };
+                        listaCoberturas.Add(coberturaModel);
+                        coberturaModel = null;
+                    }
+                    return listaCoberturas;
+
+                default:
+                    foreach (var par in items)
+                    {
+                        string[] chaveValor = par.Split(';');
+
+                        beneficiarioModel = new BeneficiarioModel
+                        {
+                            Id = ObjectId.GenerateNewId().ToString(),
+                            Nome = chaveValor[0],
+                            PercentualBeneficio = chaveValor[1]
+                        };
+                        listaBeneficiarios.Add(beneficiarioModel);
+                        beneficiarioModel = null;
+                    }
+                    return listaBeneficiarios;
+            }
+
+
+        }
         [HttpPost]
-        public async Task<IActionResult> Create(SeguroModel model, string frequenciaPagamento, string hddCobertura,string hddBeneficiario)
+        public async Task<IActionResult> Create(SeguroModel model, string frequenciaPagamento, string hddCobertura, string hddBeneficiario)
         {
             model.FrequenciaPagamento = frequenciaPagamento;
+            model.Coberturas = (List<CoberturaModel>)RestornaLista(hddCobertura);
+            model.Beneficiarios = (List<BeneficiarioModel>)RestornaLista(hddBeneficiario,false);
+
+
             if (ModelState.IsValid)
             {
                 model.Id = ObjectId.GenerateNewId().ToString();

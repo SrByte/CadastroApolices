@@ -335,17 +335,16 @@
                     }
                     else {
                         coberturas += valorCoberturaValue.trim();
-
                     }
 
                 }             
             });
 
             document.getElementById('hddCobertura').value = coberturas;
-     
+           // alert(coberturas);
 
             if (erroCobertura == 0 && erroBeneficiario == 0) {
-                 event.currentTarget.submit();
+                event.currentTarget.submit();
             }
             else if (erroCobertura == 1 && erroBeneficiario == 1) {
                 alert('existem campos em branco para as Coberturas e Beneficiarios!!!')
