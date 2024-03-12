@@ -298,7 +298,7 @@
             event.preventDefault();
             var erroCobertura = 0;
             var erroBeneficiario = 0;
-
+            var somaPorcentagemBeneficiario = 0;
 
             var grid = document.querySelector('.gridCobertura');
             var rows = grid.querySelectorAll('.row .linhaCobertura');
@@ -384,6 +384,7 @@
                     }
                     else {
                         beneficiarios += valorBeneficiarioValue.trim();
+                        somaPorcentagemBeneficiario += parseFloat(valorBeneficiarioValue.trim());
                     }
                 }
                 else {
@@ -401,14 +402,20 @@
                     }
                     else {
                         beneficiarios += valorBeneficiarioValue.trim();
+                        somaPorcentagemBeneficiario += parseFloat(valorBeneficiarioValue.trim());
                     }
                 }
             });
 
+            if (somaPorcentagemBeneficiario < 1 || somaPorcentagemBeneficiario > 100) {
+                alert('A soma das porcentagems para o(s) beneficiário(s) não pode ser zero ou ultrassar 100%');
+            }
+
             document.getElementById('hddBeneficiario').value = beneficiarios;
 
 
-            if (erroCobertura == 0 && erroBeneficiario == 0) {
+
+            if (erroCobertura == 0 && erroBeneficiario == 0 && (somaPorcentagemBeneficiario > 0 && somaPorcentagemBeneficiario <= 100)) {
                 event.currentTarget.submit();
             }
             else if (erroCobertura == 1 && erroBeneficiario == 1) {
