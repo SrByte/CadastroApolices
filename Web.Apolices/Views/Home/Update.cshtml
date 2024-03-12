@@ -58,7 +58,7 @@
                                 <input type="text" class="form-control" id="nomeCobertura_@contador" value=@cobertura.Descricao placeholder="Digite a cobertura.">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" id="valorCobertura_@contador" value=@cobertura.CapitalSegurado placeholder="Digite a % da cobertura.">
+                                <input type="text" class="form-control" id="valorCobertura_@contador" value=@cobertura.CapitalSegurado maxlength="8" oninput="formatarValor(this);" placeholder="Digite a % da cobertura.">
                             </div>
                             <div class="col">
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmDeleteModal" onclick="excluirLinha(this)">
@@ -311,6 +311,10 @@
             inputValorCobertura.className = 'form-control';
             inputValorCobertura.id = 'valorCobertura' + contadorAtual;
             inputValorCobertura.placeholder = 'Digite o valor.';
+            inputValorCobertura.maxLength = 8;
+            inputValorCobertura.oninput = function () {
+                formatarValor(this);
+            };
 
             divValorCobertura.appendChild(inputValorCobertura);
             // Criar botão de delete

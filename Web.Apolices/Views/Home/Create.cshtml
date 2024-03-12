@@ -178,6 +178,10 @@
             inputValorCobertura.className = 'form-control';
             inputValorCobertura.id = 'valorCobertura' + contadorAtual;
             inputValorCobertura.placeholder = 'Digite o valor.';
+            inputValorCobertura.maxLength = 8;
+            inputValorCobertura.oninput = function () {
+                formatarValor(this);
+            };
 
             divValorCobertura.appendChild(inputValorCobertura);
             // Criar botão de delete
